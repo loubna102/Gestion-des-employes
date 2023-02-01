@@ -1,0 +1,88 @@
+<div class="container-fluid g-0 p-2" style="border-radius: 10px;">
+
+    <div class="row g-0">
+
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+            <img src="../../assets/images/{{employee.profile}}" alt="Profile Image" class="profile">
+        </div>
+
+        <div class="col ps-2">
+
+            <div class="row g-0">
+
+                <div class="col-md-10 text-center">
+                    <span class="name" style="background-color: #B6BDBD; color: #e7e7e7;">{{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
+                </div>
+
+                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn"
+                            (click)="editEmployeeClicked()" style="background-color: #e7e7e7; color: black; border-radius: 12px;">Modifier</button>
+                        <button type="button" class="btn btn-outline-danger"
+                            (click)="deleteEmployeeClicked()" style="background-color: #E15656; color: black; border-radius: 12px;">Supprimer</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row g-0 mt-3">
+
+                <div class="col-md" >
+
+                    <table class="table table-hover mx-auto">
+                        <thead class="text-center fs-5 fst-italic text-secondary">
+                            <tr>
+                                <td colspan="2" style="color: black">Détails personnels</td>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: #B6BDBD">
+                            <tr style="color: black">
+                                <td>Date de naissance</td>
+                                <td>{{employee.birthdate}}</td>
+                            </tr>
+                            <tr style="color: black">
+                                <td>Sexe</td>
+                                <td>{{employee.gender == 'm' ? "Masculin" : "Féminin"}}</td>
+                            </tr>
+                            <tr style="color: black">
+                                <td>Éducation</td>
+                                <td>{{employee.education | titlecase}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="col">
+
+                    <table class="table table-hover mx-auto">
+                        <thead class="text-center fs-5 fst-italic text-secondary">
+                            <tr>
+                                <td colspan="2" style="color: black">Détails du poste</td>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: #B6BDBD">
+                            <tr style="color: black">
+                                <td>Société</td>
+                                <td>{{employee.company | titlecase}}</td>
+                            </tr>
+                            <tr style="color: black">
+                                <td>Expérience</td>
+                                <td>{{employee.jobExperience}} ans</td>
+                            </tr>
+                            <tr style="color: black">
+                                <td>Salaire</td>
+                                <td>{{employee.salary}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

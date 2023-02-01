@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "firstname": "LOUBNA",
+      "lastname": "ELASRI",
+      "birthdate": "2002-11-13",
+      "gender": "f",
+      "education": "Licence",
+      "company": "ESTSB",
+      "jobExperience": 3,
+      "salary": 20000,
+      "profile": "Profile-03.jpg",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
